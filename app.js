@@ -86,7 +86,7 @@ function setUpGraphics() {
       img.fill(hslCol)
     }
 
-    img.text(message, i * 100, i * -100)
+    img.text(message, i * 200, i * -100)
     img.pop()
     repeats.push(img)
   }

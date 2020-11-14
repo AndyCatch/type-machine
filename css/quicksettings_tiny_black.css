@@ -159,10 +159,12 @@
   width: 100%;
   display: block;
   text-indent: 20px;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALklEQVQ4T2NMS0v7z0ABYAQZMGvWLLKMSEtLYxg1YDQMRtMBAwP1woCsrAjVBAB1700hDp2I2AAAAABJRU5ErkJggg==') no-repeat;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALklEQVQ4T2NMS0v7z0ABYAQZMGvWLLKMSEtLYxg1YDQMRtMBAwP1woCsrAjVBAB1700hDp2I2AAAAABJRU5ErkJggg==')
+    no-repeat;
 }
 .qs_checkbox input:checked + span {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvklEQVQ4T63Tyw2EIBAA0OFKCSCdeaYAoAy1AM52JrTAlc2QYHAdjFmWo5l5zgeY1jrDwGEIeO+Bc16YlNIj18ZpraEA+76DMaYkbtvWRTC5jZvn+QoopeA4DhKpyW3MCdQWUKcQKhlbPVtAAA8ViN978A34RkIIwBgDKSXZGglUxFoL0zSVymKMsCzLbbiPgHMOhBClAqxkXdd3QDsH/HPOuVRCbee/Q+ytqredyxrrTfz5Ig1f5eHHNPCa4QMbS/ghxbi89AAAAABJRU5ErkJggg==') no-repeat;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvklEQVQ4T63Tyw2EIBAA0OFKCSCdeaYAoAy1AM52JrTAlc2QYHAdjFmWo5l5zgeY1jrDwGEIeO+Bc16YlNIj18ZpraEA+76DMaYkbtvWRTC5jZvn+QoopeA4DhKpyW3MCdQWUKcQKhlbPVtAAA8ViN978A34RkIIwBgDKSXZGglUxFoL0zSVymKMsCzLbbiPgHMOhBClAqxkXdd3QDsH/HPOuVRCbee/Q+ytqredyxrrTfz5Ig1f5eHHNPCa4QMbS/ghxbi89AAAAABJRU5ErkJggg==')
+    no-repeat;
 }
 .qs_checkbox_label {
   position: absolute;
@@ -194,7 +196,8 @@
   border: none;
 }
 .qs_select {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAn0lEQVRIS+2SwQ3AIAhFPzM4iUe3cTS38eYmzmDzm5jYpgWTpjc4Cv4PDwTAwI8hbmDRdUQWITii74hCCOi9PwppuflB3UFKCTlnlFJQa72YaLm1UDWgOIUYq8kU5zuNmXsL84ruJhTi2444a0yDKTgnGWNARMzOt3awjs2uY4yneGtNxbK9gztXXg3j7aqe9rCFyDx2pcANTHqOyER0AGnMUQHV+W35AAAAAElFTkSuQmCC') no-repeat right #000000;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAn0lEQVRIS+2SwQ3AIAhFPzM4iUe3cTS38eYmzmDzm5jYpgWTpjc4Cv4PDwTAwI8hbmDRdUQWITii74hCCOi9PwppuflB3UFKCTlnlFJQa72YaLm1UDWgOIUYq8kU5zuNmXsL84ruJhTi2444a0yDKTgnGWNARMzOt3awjs2uY4yneGtNxbK9gztXXg3j7aqe9rCFyDx2pcANTHqOyER0AGnMUQHV+W35AAAAAElFTkSuQmCC')
+    no-repeat right #000000;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
