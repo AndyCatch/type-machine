@@ -7,25 +7,10 @@ let tileH
 
 let vw = window.innerWidth * 0.01
 
-QuickSettings.useExtStyleSheet()
-var settings = QuickSettings.create(20, 20, 'Controls')
-  .addRange('Text Size', 10, 45, 30, 1, setTextSize)
-  .addRange('Color', 0, 360, 80, 20, setTextCol)
-  .addRange('Repeats', 1, 9, 3, 1, setRepeater)
-  .addDropDown(
-    'Track',
-    ['BASS', 'SNARE', 'KICK', 'PERC', 'ARPEG', 'LEAD', 'CHORD'],
-    setDropDown
-  )
-  .addRange('Num Columns', 2, 80, 4, 2, setTileX)
-  .addRange('Num Rows', 2, 80, 4, 2, setTileY)
-  .addRange('Amplitude', 50, 500, 100, 10, setMultiplier)
-  .addRange('Tempo', 0.025, 0.55, 0.125, 0.025, setWave)
-
 // Quick Settings variables
 let message = 'BASS' //Initial
 let multiplier = 100
-let wave = 0.125
+let wave = 0.075
 let loopNum = 3
 let fontsize = 30
 let visible = true
@@ -38,6 +23,21 @@ let hslCol
 // Repeater
 let wordRepeat = 3
 let repeats = []
+
+QuickSettings.useExtStyleSheet()
+var settings = QuickSettings.create(20, 20, 'Controls')
+  .addRange('Text Size', 10, 45, fontsize, 1, setTextSize)
+  .addRange('Color', 0, 360, textHue, 20, setTextCol)
+  .addRange('Repeats', 1, 9, wordRepeat, 1, setRepeater)
+  .addDropDown(
+    'Track',
+    [`${message}`, 'SNARE', 'KICK', 'PERC', 'ARPEG', 'LEAD', 'CHORD'],
+    setDropDown
+  )
+  .addRange('Num Columns', 2, 80, tilesY, 2, setTileX)
+  .addRange('Num Rows', 2, 80, tilesX, 2, setTileY)
+  .addRange('Amplitude', 50, 500, multiplier, 10, setMultiplier)
+  .addRange('Tempo', 0.025, 0.35, wave, 0.025, setWave)
 
 function preload() {
   font = loadFont('font/graphik-medium.otf')
@@ -56,6 +56,18 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
 
   setUpGraphics()
+
+  addEffects(
+    // blur2d(1, 1, 5)
+    // motionBlur(0, 0.003),
+    // hsvToRgb(vec4(getComp(rgbToHsv(fColor()), 'z'), 1, 1, 1))
+    noiseDisplacement(0.5),
+    contrast(-5),
+    edge()
+    // oldFilm()
+    // vignette()
+  )
+  addChannels(null)
 }
 
 // Initial Value
