@@ -1,7 +1,11 @@
 {
-  "include": [
-    "*.js",
-    "libraries/*.js",
-    "/Users/andycatch/.vscode/extensions/samplavigne.p5-vscode-1.2.3/p5types/global.d.ts"
-  ]
+	"include": [
+		"*.js",
+		"libraries/*.js",
+		"/Users/andycatch/.vscode/extensions/samplavigne.p5-vscode-1.2.3/p5types/global.d.ts",
+		"js/versions/app-0.js",
+		"js/versions/app-1.js",
+		"js/versions/app-effects-1.js",
+		"js/versions/app-effects-2.js"
+	]
 }

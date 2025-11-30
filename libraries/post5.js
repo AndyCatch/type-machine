@@ -4264,9 +4264,37 @@ exports.WebGLProgramLoop = WebGLProgramLoop;
     info.replaced = true;
   }
 
+  // keep the effects canvas in sync with the p5 canvas (handles window resize)
+  function syncCanvasSize() {
+    if (!info.replaced || !info.orig || !info.canvas || !info.gl || !info.merger)
+      return;
+
+    const sizeChanged =
+      info.canvas.width !== info.orig.width ||
+      info.canvas.height !== info.orig.height;
+
+    if (!sizeChanged) return;
+
+    info.canvas.width = info.orig.width;
+    info.canvas.height = info.orig.height;
+
+    const styleWidth = info.orig.style.width || `${info.orig.width}px`;
+    const styleHeight = info.orig.style.height || `${info.orig.height}px`;
+    info.canvas.style.width = styleWidth;
+    info.canvas.style.height = styleHeight;
+
+    info.gl.viewport(0, 0, info.gl.drawingBufferWidth, info.gl.drawingBufferHeight);
+
+    info.merger.delete();
+    info.merger = new MP.Merger(pr.__info.effects, info.orig, info.gl, {
+      channels: pr.__info.channels,
+    });
+  }
+
   function mpPost() {
     if (info.verbosity > 1) console.log("mp post");
     if (!info.effects) return;
+    syncCanvasSize();
     const time = info.startTime - new Date().getTime();
     info.merger.draw(time / 1000, info.mousePos.x, info.mousePos.y);
   }
