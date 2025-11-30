@@ -148,7 +148,7 @@ function setUpEffects() {
 	addEffects(
 		// contrast(2),
 		noiseDisplacement(10),
-		celShade(5)
+		celShade(2)
 		// edge())
 	)
 	addChannels(null)
